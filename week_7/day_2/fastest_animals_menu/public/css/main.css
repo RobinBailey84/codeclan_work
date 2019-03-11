@@ -1,0 +1,43 @@
+label::after {
+  content: ':';
+}
+
+body {
+  background-color: lightsteelblue;
+  font-family: helvetica;
+}
+
+main.main-grid-container {
+  display: grid;
+  grid-template-columns: 80px auto;
+}
+
+
+nav.animal-menu {
+  background-color: #dddfd4;
+  min-height: 100vh;
+  grid-column-start: 1;
+}
+
+a.animal-menu-item {
+  display: block;
+  color: #173e43;
+  cursor: pointer;
+  padding: 0.175rem;
+}
+
+a.animal-menu-item:hover {
+  color: #fae596;
+  background-color: #173e43;
+}
+
+section.animal-details {
+  grid-column-start: 2;
+  color: honeydew;
+  background-color: black;
+  padding: 1rem;
+}
+
+section.animal-details li {
+  padding: 0.175rem;
+}

@@ -1,0 +1,23 @@
+<form action="/pizzas/<%=@order.id%>" method="post">
+  <label for="first_name">First Name:</label>
+  <input type="text" name="first_name" value="<%= @order.first_name %>">
+
+  <label for="last_name"> Last name:</label>
+  <input type="text" name="last_name" value="<%= @order.last_name %>">
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity" values="<%= @order.quantity %>">
+
+  <label for="topping">Topping:</label>
+  <select name="topping">
+    <% for topping in @toppings %>
+    <% if topping == @order.topping%>
+    <option selected value="<%= topping %>"><%=topping%></option>
+    <% else %>
+    <option value="<%= topping %>"><%= topping %></option>
+    <%end %>
+    <%end %>
+  </select>
+
+  <input type="submit" value="Edit now">
+</form>
